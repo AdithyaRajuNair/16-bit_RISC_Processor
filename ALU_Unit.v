@@ -6,7 +6,7 @@ module ALU(
  
  output reg [15:0] result,  //result 
  output reg zero,
- output reg lt
+ output reg neg
     );
 
 always @(*)
@@ -24,7 +24,7 @@ begin
 if (upd_flag)
 begin
     zero = (result==16'd0) ? 1'b1: 1'b0;
-    lt = (result[15]==1'b1) ? 1'b1: 1'b0;
+    neg = (result[15]==1'b1) ? 1'b1: 1'b0;
 end
  
 end
