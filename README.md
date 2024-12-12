@@ -25,7 +25,7 @@ The CPU was developed using Verilog HDL, simulated in Xilinx Vivado. It supports
   - Operands are 16-bit signed integers.
 
 ![image](https://github.com/user-attachments/assets/73cf92ca-e410-4247-a1ce-5343ab562d40)
-![image](https://github.com/user-attachments/assets/e2758ca6-2a03-4efe-8d70-00fbf74f7be1)
+![image](https://github.com/user-attachments/assets/9b6864c4-c069-4da8-a10c-2554d86b51d6)
 
 
 ### Processor Components
