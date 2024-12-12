@@ -23,8 +23,8 @@ The CPU was developed using Verilog HDL, simulated in Xilinx Vivado. It supports
 - **Memory Model**:
   - Word-addressable memory with a linear addressing space of 8K words.
   - Operands are 16-bit signed integers.
- 
-    ![image](https://github.com/user-attachments/assets/1ac1f39f-dec6-4889-8e22-8be2d48fba4d)
+
+![image](https://github.com/user-attachments/assets/73cf92ca-e410-4247-a1ce-5343ab562d40)
 
 
 ### Processor Components
