@@ -18,7 +18,7 @@ module Datapath(
     wire [2:0] inrw, inrwimm, inrr1, inrr2;
     wire [15:0] regr_data1, regr_data2, ext_imm, read_data1, read_datals, read_data2;
     wire [2:0] ALUctrl;
-    wire zflag, ltflag;
+    wire zflag, nflag;
     wire [15:0] pc_j, pc_b, pc2_b, pc_hlt;
     wire [15:0] immdata;
     wire beq_ctrl, bne_ctrl, blt_ctrl, ble_ctrl, bgt_ctrl, bge_ctrl;
@@ -76,7 +76,7 @@ module Datapath(
         .upd_flag(upd_flag),
         .result(ALUout),
         .zero(zflag),
-        .lt(ltflag)
+        .neg(nflag)
     );
 
     assign mem_address = ALUout;
@@ -85,10 +85,10 @@ module Datapath(
     assign pc_b = ALUout;
     assign beq_ctrl = b & zflag;
     assign bne_ctrl = b & ~zflag;
-    assign blt_ctrl = b & ltflag;
-    assign ble_ctrl = b & (ltflag | zflag);
-    assign bgt_ctrl = b & (~ltflag & ~zflag);
-    assign bge_ctrl = b & ~ltflag;
+    assign blt_ctrl = b & nflag;
+    assign ble_ctrl = b & (nflag | zflag);
+    assign bgt_ctrl = b & (~nflag & ~zflag);
+    assign bge_ctrl = b & ~nflag;
 
     MUX8x1 bselect (
         .d0(beq_ctrl),
