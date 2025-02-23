@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the implementation of a Reduced Instruction Set Computer (RISC) CPU, designed and tested as part of the **EE 326: Computer Organization and Processor Architecture Design** course at **IIT Mandi**, under the guidance of Dr. Shubhajit Roy Chowdhury. The project demonstrates the development of a functional processor capable of executing a custom instruction set with essential features of RISC architecture.
+This repository contains the implementation of a Reduced Instruction Set Computer (RISC) CPU, designed and tested as part of the **EE 326: Computer Organization and Processor Architecture Design** course at **IIT Mandi**, under the guidance of Dr. Shubhajit Roy Chowdhury. The project demonstrates the design and simulation of a functional processor of instruction size 16 bits, capable of executing a custom instruction set with essential features of RISC architecture.
 
 The CPU was developed using Verilog HDL, simulated in Xilinx Vivado. It supports basic arithmetic, logical operations, memory access, and control flow instructions.
 
@@ -18,7 +18,7 @@ The CPU was developed using Verilog HDL, simulated in Xilinx Vivado. It supports
   - **Arithmetic**: `add`, `sub`.
   - **Logical**: `not`, `and`, `or`.
   - **Data Transfer**: `mov`, `movi`, `ld`, `str`.
-  - **Control Flow**: `jmp`, `b` (branch).
+  - **Control Flow**: `jmp`, `cmp`, `b` (branch).
   - **Special**: `hlt` (halt).
 - **Memory Model**:
   - Word-addressable memory with a linear addressing space of 8K words.
